@@ -1,5 +1,7 @@
 # Design Document
 
+## Backend
+
 Framework: Laravel
 
 Models: `User`, `Task`
@@ -10,7 +12,7 @@ Implements controllers, views, repositories for all models in the same consisten
 
 By Model:
 * Will have a single table just to store its informations
-* Will have a Class Controller, containint at least the `show`, `create`, `store`, `edit`, `delete` and `destroy` methods.
+* Will have a Class Controller, containint at least the `show`, `create`, `store`, `edit`, `update`, `delete` and `destroy` methods.
 * Each method controller, called *action*, will make changes using its repository.
 * Each Controller will have a property that will be its repostitory, that will be initialized in the methods contructor.
 * For each controller, will have a views directory with it's same name prefix. Inside each folder, will have a view, that matches the Controller's action name.
@@ -23,7 +25,7 @@ Console commands:
 
 `dev:createdatabase` -> Laravel does not provides anything to automatically creates the database. So, a command specialized for this will be required.
 
-## Fronted
+## Frontend
 
 Although the [official laravel Transport page](https://laravel.com/docs/5.5/passport) teaches to use a frontend based using axios and Vue, we will use the axios for facilitate the api call, but the final objective os not to use the Vue library. May in meddle of the path we should implement the Vue, in the final we don't need to be dependant on it.
 
